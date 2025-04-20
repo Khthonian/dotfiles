@@ -18,17 +18,9 @@ alias starconf="nvim ~/.config/starship.toml"
 
 alias vim="nvim"
 
-if command -v chezmoi > /dev/null 2>&1; then
-  alias zshconf="chezmoi edit ~/.zshrc"
+alias zshconf="chezmoi edit ~/.zshrc"
 
-  alias zshload="chezmoi apply && source ~/.zshrc"
-
-else
-  alias zshconf="nvim ~/.zshrc"
-
-  alias zshload="source ~/.zshrc"
-
-fi
+alias zshload="chezmoi apply && source ~/.zshrc"
 
 alias zz="z -"
 
