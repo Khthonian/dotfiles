@@ -28,6 +28,8 @@ else
 
   alias zshload="source ~/.zshrc"
 
+fi
+
 alias zz="z -"
 
 # Add bin directory
