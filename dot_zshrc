@@ -18,9 +18,17 @@ alias starconf="nvim ~/.config/starship.toml"
 
 alias vim="nvim"
 
-alias zshconf="nvim ~/.zshrc"
+if command -v chezmoi > /dev/null 2>&1; then
+  alias zshconf="chezmoi edit ~/.zshrc
 
-alias zshload="source ~/.zshrc"
+  alias zshload="chezmoi apply && source ~/.zshrc"
+
+else
+  alias zshconf="nvim ~/.zshrc"
+
+  alias zshload="source ~/.zshrc"
+
+alias zz="z -"
 
 # Add bin directory
 export PATH=~/bin:$PATH
@@ -44,7 +52,7 @@ esac
 . "$HOME/.local/bin/env"
 
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Load starship
 eval "$(starship init zsh)"
