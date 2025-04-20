@@ -22,8 +22,6 @@ alias zshconf="nvim ~/.zshrc"
 
 alias zshload="source ~/.zshrc"
 
-alias zz="z -"
-
 # Add bin directory
 export PATH=~/bin:$PATH
 
